@@ -13,5 +13,10 @@ def ConverUpperCase(text):
     return text.upper()
 
 def beautifyJson(text):
-    jsonVal = json.loads(text)
-    return json.dumps(jsonVal, indent=3)
+    text.replace('{',"{\n")
+    text.replace(',',",\n")
+    text.replace('}',"\n}")
+    return text
+
+def ConvertLowerCase(text):
+    return text.lower()

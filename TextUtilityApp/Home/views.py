@@ -19,4 +19,7 @@ def result(request):
             elif(task == 'beautifyData'):
                 task ='Beautifying Data'
                 result = textUtil.beautifyJson(textValue)
+            elif(task == 'lowerCase'):
+                task ='Converting into LowerCase'
+                result = textUtil.ConvertLowerCase(textValue)
     return render(request, 'result.html',{'result':result, 'task': task})
